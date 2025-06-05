@@ -22,7 +22,7 @@ ANNOT_FOLDER_NAME = "label"
 
 IGNORE = 255
 
-label_suffix='.png' # jpg for gan dataset, others : png
+label_suffix='.png' 
 
 def load_img_name_list(dataset_path):
     img_name_list = np.loadtxt(dataset_path, dtype=str)
