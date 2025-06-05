@@ -22,7 +22,7 @@ ANNOT_FOLDER_NAME = "label"
 
 IGNORE = 255
 
-label_suffix='.jpg' # jpg for gan dataset, others : png
+label_suffix='.png' # jpg for gan dataset, others : png
 
 def load_img_name_list(dataset_path):
     img_name_list = np.loadtxt(dataset_path, dtype=str)
@@ -45,7 +45,7 @@ def get_img_path(root_dir, img_name):
 
 
 def get_label_path(root_dir, img_name):
-    return os.path.join(root_dir, ANNOT_FOLDER_NAME, img_name.replace('.jpg', label_suffix))
+    return os.path.join(root_dir, ANNOT_FOLDER_NAME, img_name.replace('.png', label_suffix))
 
 
 class ImageDataset(data.Dataset):
